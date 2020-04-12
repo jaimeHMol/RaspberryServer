@@ -4,6 +4,7 @@ Set of scripts, configurations and steps to use a Raspberry Pi 3 as a Python ser
 
 ## Initial setup
 * wpa_supplicant and ssh (For wifi headless config)
+* run python script on boot and send a pushbullet.py with status and ip-address (SSH ready)
 * raspi-config  (Host name set up)
 * update
 * upgrade
