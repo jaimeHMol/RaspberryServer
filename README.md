@@ -14,7 +14,7 @@ Set of scripts, configurations and steps to use a Raspberry Pi 3 as a Python ser
 * avahi-daemon
 * rmate
 * Custom Raspberry configs (fix HDMI issue, splash screen, avoid Raspberry go to sleep) 
-* Set up my projects folder (Python, Web, R, Commons)
+* Set up my projects folder (Python, Web, R, Commons, 0.Config)
   * Create folders
   * Git clone to my repositories
   * Deploy (call script)
