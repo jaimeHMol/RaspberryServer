@@ -1,0 +1,13 @@
+PORT=8000
+REPOSRC=https://github.com/jaimeHMol/QB.git
+LOCALREPO=~/Projects/Python/QBProject
+
+
+
+echo Stoping Django active servers...
+
+# ps auxw | grep runserver
+djangoProcess=`ps auxw | grep "runserver..$PORT"` # To search id of django server in port 8000 process
+set -- $djangoProcess
+processID=$2
+kill $processID
