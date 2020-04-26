@@ -33,7 +33,7 @@ PORT=7000
 REPOSRC=https://github.com/jaimeHMol/QB.git
 LOCALREPO=~/Projects/Python/OpenQBProject/OpenQB
 VIRTUALENVNAME=venv
-MODE=local  # MODE: local  -> to run on localhost using the same terminal session.
+MODE=server  # MODE: local  -> to run on localhost using the same terminal session.
             #       server -> to keep running as a daemon (require screen installed).
             #                 YOU WILL LOSE ALL THE UN-PUSHED CHANGES (you shouldn't
             #                 be developing on the server!!!)
