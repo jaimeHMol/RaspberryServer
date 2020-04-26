@@ -10,6 +10,20 @@
 # 6. Run Django migrations
 # 7. Run Django server in local or server mode
 #
+# Having in mind a Django project folder structure like this:
+# ~/                              (User folder, ej: /Users/jherran/)
+# ├── Projects/
+# │   ├── Python/
+# │   │   ├── <AppName>Project/   (ej: QBProject)
+# │   │   │   ├── venv/           (virtual environment folder)
+# │   │   │   ├── <AppName>/      (ej: QB)
+# │   │   │   │   ├── <AppName>/  (Main Django project App, ej: QB)
+# │   │   │   │   ├── <AppName1>/ (App1 of the Django project, ej: QBAnalytics)
+# │   │   │   │   ├── <AppName2>/ (App2 of the Django project, ej: QBShopCart)
+# │   │   │   │   └── <AppName3>/ (App3 of the Django project, ej: QBShowcase)
+# :   :   :   :
+# :   :   :   :
+#
 # 24 April 2020 - @jaimeHMol
 
 
@@ -17,10 +31,12 @@
 # -----------------------------
 PORT=7000
 REPOSRC=https://github.com/jaimeHMol/QB.git
-LOCALREPO=~/Projects/Python/QBProject/BORRAR
-VIRTUALENVNAME=venvBORRAR
-MODE=local  # MODE: server -> to keep running as a daemon (require screen installed).
-            #       local  -> to run on localhost using the same terminal session.
+LOCALREPO=~/Projects/Python/OpenQBProject/OpenQB
+VIRTUALENVNAME=venv
+MODE=local  # MODE: local  -> to run on localhost using the same terminal session.
+            #       server -> to keep running as a daemon (require screen installed).
+            #                 YOU WILL LOSE ALL THE UN-PUSHED CHANGES (you shouldn't
+            #                 be developing on the server!!!)
 
 
 SCREENNAME=QBScreenSession
@@ -58,9 +74,11 @@ else
     echo "   *** Pulling last version of the repository..."
     cd "$LOCALREPO"
     # git fetch "$REPOSRC"
-    git fetch --all
+    git fetch
     # git checkout .e
-    git reset --hard origin/master
+    if [ "$MODE" == "server" ]; then
+      git reset --hard origin/master
+    fi
 fi
 
 
