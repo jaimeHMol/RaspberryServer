@@ -59,8 +59,8 @@ fi
 
 echo "*** Creating project folder and local repo folder (if doesn't exist)..."
 rootProjectFolder="${LOCALREPO%/*}/"
-# mkdir - p $rootProjectFolder
-mkdir - p $LOCALREPO
+# mkdir -p $rootProjectFolder
+mkdir -p $LOCALREPO
 
 echo "*** Connecting to repository..."
 
