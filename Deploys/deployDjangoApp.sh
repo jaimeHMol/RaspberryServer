@@ -38,7 +38,6 @@ MODE=server  # MODE: local  -> to run on localhost using the same terminal sessi
             #                 YOU WILL LOSE ALL THE UN-PUSHED CHANGES (you shouldn't
             #                 be developing on the server!!!)
 
-
 SCREENNAME=QBScreenSession
 
 
@@ -88,7 +87,7 @@ if [ -d "$rootProjectFolder"/"$VIRTUALENVNAME" ]; then
 else
   echo "Virtual environment will be created"
   cd "$rootProjectFolder"
-  virtualenv --no-site-packages "$VIRTUALENVNAME"
+  python3 -m venv "$VIRTUALENVNAME"
 fi
 
 
@@ -112,6 +111,7 @@ if [ "$MODE" == "local" ]; then
   echo  "*** Running Django app in local mode..."
   echo  "*** Your webapp will run in this same session. Go to your browser at 127.0.0.1:$PORT"
   python3 manage.py runserver 127.0.0.1:"$PORT"
+  deactivate
   echo  "*** Local deployment session ended."
 
 elif [ "$MODE" == "server" ]; then
