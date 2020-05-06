@@ -1,6 +1,8 @@
 # -----------------------
 # Django automated deploy
 # -----------------------
+# Shell script to be running in Unix systems (Mac or Linux). Automates all the steps 
+# to deploy a Django webapp, including:
 # 1. Stop Django active servers (This will kill all the django apps running at the
 #    entered port, either if they are running in first plane or in background).
 # 2. Create paths
@@ -9,6 +11,12 @@
 # 5. Install dependencies on virtual environment
 # 6. Run Django migrations
 # 7. Run Django server in local or server mode
+#
+# Requirements:
+# * Have Git (terminal app) installed
+# * Have Python3 (with pip) installed
+# * Have virtualenv (terminal app) installed
+# * If you want to deploy in a server, Have screen (terminal app) installed.
 #
 # Having in mind a Django project folder structure like this:
 # ~/                              (User folder, ej: /Users/jherran/)
@@ -37,6 +45,7 @@ MODE=server  # MODE: local  -> to run on localhost using the same terminal sessi
             #       server -> to keep running as a daemon (require screen installed).
             #                 YOU WILL LOSE ALL THE UN-PUSHED CHANGES (you shouldn't
             #                 be developing on the server!!!)
+
 
 SCREENNAME=QBScreenSession
 

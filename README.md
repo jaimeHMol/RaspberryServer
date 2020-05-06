@@ -13,6 +13,8 @@ Set of scripts, configurations and steps to use a Raspberry Pi 3 as a Python ser
 * virtualenv
 * avahi-daemon
 * rmate
+* docker
+* (ngrok)
 * Custom Raspberry configs (fix HDMI issue, splash screen, avoid Raspberry go to sleep) 
 * Create custom users (handling permissions) in addition to pi user.
 * Set up my projects folder (Python, Web, R, Commons, 0.Config)
@@ -21,7 +23,7 @@ Set of scripts, configurations and steps to use a Raspberry Pi 3 as a Python ser
   * Deploy (call script)
 * Set Aliases (call script)
 * Set CronJobs (call script)
-* docker
+
 
 ## Aliases
 
