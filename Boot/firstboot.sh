@@ -41,7 +41,7 @@ ipAddress=hostname -I
 
 
 echo "*** Sending a Pushbullet message reporting the original Raspberry status"
-curl -u o.NMEh6dZhlsNQX4IwH0EYQaeXZzmWSeUI: -X POST https://api.pushbullet.com/v2/pushes --header 'Content-Type: application/json' --data-binary '{"type": "note", "title": "Raspberry server original status", "body": "ipAddress=$ipAddress, hostName=raspberrypi.local, aptVersion=$aptVersion, pythonVersion=$pythonVersion, python3Version=$python3Version, virtualenvVersion=$virtualenvVersion, screenVersion=$screenVersion, avahiVersion=$avahiVersion, rmateVersion=$rmateVersion."'
+curl -u o.NMEh6dZhlsNQX4IwH0EYQaeXZzmWSeUI: -X POST https://api.pushbullet.com/v2/pushes --header 'Content-Type: application/json' --data-binary '{"type": "note", "title": "Raspberry server original status", "body": "ipAddress=$ipAddress, hostName=raspberrypi.local, aptVersion=$aptVersion, pythonVersion=$pythonVersion, python3Version=$python3Version, virtualenvVersion=$virtualenvVersion, screenVersion=$screenVersion, avahiVersion=$avahiVersion, rmateVersion=$rmateVersion."}'
 
 
 
@@ -104,7 +104,7 @@ ipAddress=hostname -I
 
 
 echo "*** Sending a Pushbullet message reporting the original Raspberry status"
-curl -u o.NMEh6dZhlsNQX4IwH0EYQaeXZzmWSeUI: -X POST https://api.pushbullet.com/v2/pushes --header 'Content-Type: application/json' --data-binary '{"type": "note", "title": "Raspberry server original status", "body": "ipAddress=$ipAddress, hostName=raspberrypi.local, aptVersion=$aptVersion, pythonVersion=$pythonVersion, python3Version=$python3Version, virtualenvVersion=$virtualenvVersion, screenVersion=$screenVersion, avahiVersion=$avahiVersion, rmateVersion=$rmateVersion."'
+curl -u o.NMEh6dZhlsNQX4IwH0EYQaeXZzmWSeUI: -X POST https://api.pushbullet.com/v2/pushes --header 'Content-Type: application/json' --data-binary '{"type": "note", "title": "Raspberry server original status", "body": "ipAddress=$ipAddress, hostName=raspberrypi.local, aptVersion=$aptVersion, pythonVersion=$pythonVersion, python3Version=$python3Version, virtualenvVersion=$virtualenvVersion, screenVersion=$screenVersion, avahiVersion=$avahiVersion, rmateVersion=$rmateVersion."}'
 
 
 
