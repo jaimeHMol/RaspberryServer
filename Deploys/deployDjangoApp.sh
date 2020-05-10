@@ -1,7 +1,7 @@
 # -----------------------
 # Django automated deploy
 # -----------------------
-# Shell script to be running in Unix systems (Mac or Linux). Automates all the steps 
+# Shell script to be run in Unix systems (Mac or Linux). Automates all the steps 
 # to deploy a Django webapp, including:
 # 1. Stop Django active servers (This will kill all the django apps running at the
 #    entered port, either if they are running in first plane or in background).
