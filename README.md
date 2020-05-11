@@ -3,7 +3,7 @@ Set of scripts, configurations and steps to use a Raspberry Pi 4 as a Python/Web
 
 
 ## Initial setup
-- [ ] wpa_supplicant and ssh files (For wifi headless config)
+- [x] wpa_supplicant and ssh files (For wifi headless config)
 - [x] run shell script on boot to send a pushbullet.py with status and ip-address (SSH ready). Get and send public and private ip adress. Send environment variables, tool versions, etc.
 - [x] Hostname setup (raspi-config)
 - [x] update
