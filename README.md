@@ -1,28 +1,27 @@
 # RaspberryServer
-Set of scripts, configurations and steps to use a Raspberry Pi 3 as a Python server.
+Set of scripts, configurations and steps to use a Raspberry Pi 4 as a Python/Web/Database/etc server.
 
 
 ## Initial setup
-* wpa_supplicant and ssh (For wifi headless config)
-* run python script on boot and send a pushbullet.py with status and ip-address (SSH ready)
-  pip install pushbullet.py (inside this script). Get and send public and private ip adress. Send environment variables, python, pip, apt-get versions.
-* raspi-config  (Hostname set up)
-* screen
-* update
-* upgrade
-* virtualenv
-* avahi-daemon
-* rmate
-* docker
-* (ngrok)
-* Custom Raspberry configs (fix HDMI issue, splash screen, avoid Raspberry go to sleep) 
-* Create custom users (handling permissions) in addition to pi user.
-* Set up my projects folder (Python, Web, R, Commons, 0.Config)
+- [ ] wpa_supplicant and ssh files (For wifi headless config)
+- [x] run shell script on boot to send a pushbullet.py with status and ip-address (SSH ready). Get and send public and private ip adress. Send environment variables, tool versions, etc.
+- [x] Hostname setup (raspi-config)
+- [x] update
+- [x] upgrade
+- [x] virtualenv
+- [x] avahi-daemon
+- [x] rmate
+- [x] screen
+- [ ] docker
+- [ ] (ngrok)
+- [ ] Custom Raspberry configs (fix HDMI issue, splash screen, avoid Raspberry go to sleep) 
+- [x] Create custom users (handling permissions) in addition to pi user.
+- [ ] Set up my projects folder (Python, Web, R, Commons, 0.Config)
   * Create folders
   * Git clone to my repositories
   * Deploy (call script)
-* Set Aliases (call script)
-* Set CronJobs (call script)
+- [ ] Set Aliases (call script)
+- [ ] Set CronJobs (call script)
 
 
 ## Aliases
@@ -35,3 +34,7 @@ Set of scripts, configurations and steps to use a Raspberry Pi 3 as a Python ser
 
 ## CronJobs
 * Modem automated config
+
+
+## Dependencies
+* Raspbian custom image to run a shell script on first boot: https://github.com/nmcclain/raspberian-firstboot 

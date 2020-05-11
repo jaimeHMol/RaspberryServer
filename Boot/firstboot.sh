@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# -----------------------
-#  Initial status on boot
-# -----------------------
+# ---------------------------------
+#  Initial status and setup on boot
+# ---------------------------------
 # Shell script to be run on the Raspberry boot to get the general status
 # of the relevant application install on the Raspberry and the network status
 # IP Address, internet connection etc. Making easier to work with the Raspberry 
@@ -17,6 +17,8 @@
 # * Manually add the wpa_supplicant.conf to the /mnt/boot/ directory on the flashed
 #   micro SD card, to get the raspberry connected to wifi in headless mode (neither 
 #   monitor nor keyboard).
+#
+# 9 May 2020 - @jaimeHMol
 
 
 echo "*** Executing Raspberry status script on boot"
