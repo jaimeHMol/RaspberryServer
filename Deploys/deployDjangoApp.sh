@@ -19,7 +19,7 @@
 # * If you want to deploy in a server, Have screen (terminal app) installed.
 #
 # Having in mind a Django project folder structure like this:
-# ~/                              (User folder, ej: /Users/jherran/)
+# ~/                              (User folder, Macos ej: /Users/jaimehmol/, Linux ej: /home/jaimehmol/)
 # ├── Projects/
 # │   ├── Python/
 # │   │   ├── <AppName>Project/   (ej: QBProject)
