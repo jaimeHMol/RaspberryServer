@@ -50,6 +50,7 @@ generate_post_data()
     pipVersion=$pipVersion, \
     pip3Version=$pip3Version, \
     gitVersion=$gitVersion, \
+    javaVersion=$javaVersion, \
     virtualenvVersion=$virtualenvVersion, \
     screenVersion=$screenVersion, \
     avahiVersion=$avahiVersion, \
@@ -92,6 +93,11 @@ if ! [ -f /home/pi/.firstboot.log ]; then
     gitVersion=`git --version 2>&1 | awk '{print $3}'`
     if [[ "$gitVersion" == "line" || "$gitVersion" == *":"* ]]; then
         gitVersion="No git"
+    fi
+
+    javaVersion=`java --version 2>&1 | awk 'NR==1{print $2}'`
+    if [ "$javaVersion" == "line" ]; then
+        javaVersion="No java"
     fi
 
 
@@ -161,6 +167,8 @@ if ! [ -f /home/pi/.firstboot.log ]; then
     sudo apt-get -y install python-pip
     sudo apt-get -y install python3-pip
     sudo apt-get -y install git
+    sudo apt-get -y install default-jdk
+    # TODO: Setup the JAVA_HOME environment variable
     sudo apt-get -y install screen
     sudo apt-get -y install avahi-daemon
     pip3 install virtualenv
@@ -225,6 +233,11 @@ else
     gitVersion=`git --version 2>&1 | awk '{print $3}'`
     if [[ "$gitVersion" == "line" || "$gitVersion" == *":"* ]]; then
         gitVersion="No git"
+    fi
+
+    javaVersion=`java --version 2>&1 | awk 'NR==1{print $2}'`
+    if [ "$javaVersion" == "line" ]; then
+        javaVersion="No java"
     fi
 
 
