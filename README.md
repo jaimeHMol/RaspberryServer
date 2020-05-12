@@ -4,10 +4,10 @@ Set of scripts, configurations and steps to use a Raspberry Pi 4 as a Python/Web
 
 ## Initial setup
 - [x] wpa_supplicant and ssh files (For wifi headless config)
-- [x] run shell script on boot to send a pushbullet.py with status and ip-address (SSH ready). Get and send public and private ip adress. Send environment variables, tool versions, etc.
+- [x] Run shell script on boot to send a pushbullet (More info here: https://docs.pushbullet.com/v3/) with general status, private and public ip address, environment variables, tool versions, etc.
 - [x] Hostname setup (raspi-config)
-- [x] update
-- [x] upgrade
+- [x] Update
+- [x] Upgrade
 - [x] virtualenv
 - [x] avahi-daemon
 - [x] rmate
@@ -24,12 +24,12 @@ Set of scripts, configurations and steps to use a Raspberry Pi 4 as a Python/Web
 - [ ] Set CronJobs (call script)
 
 
-## Aliases
-
-
 ## Deploy
 * Django webapps
 * Http server (static wepages)
+
+
+## Aliases
 
 
 ## CronJobs
@@ -38,3 +38,4 @@ Set of scripts, configurations and steps to use a Raspberry Pi 4 as a Python/Web
 
 ## Dependencies
 * Raspbian custom image to run a shell script on first boot: https://github.com/nmcclain/raspberian-firstboot 
+* Pushbullet API: https://docs.pushbullet.com/v3/

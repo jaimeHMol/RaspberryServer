@@ -18,16 +18,22 @@
 #   micro SD card, to get the raspberry connected to wifi in headless mode (neither 
 #   monitor nor keyboard).
 #
+# Inputs: (Fill the constants)
+#   Pushbulletkey: Your pushbullet API access token to be notified
+#   Hostname: The name you want give to the raspberry server
+#   SSH port: The port to use in the ssh connections (The standar is 22)
+#   New user: The name of the user to be created on the raspberry server (to keep pi user isolated)
+#
 # 9 May 2020 - @jaimeHMol
 
 
 echo "*** Executing Raspberry status script on boot"
 
 # Constants
-PUSHBULLETKEY="o.NMEh6dZhlsNQX4IwH0EYQaeXZzmWSeUI"
-HOSTNAME="jaimehmol"
-SSHPORT=722
-NEWUSER=qb
+PUSHBULLETKEY="PUT_YOUR_PUSHBULLET_API_ACCESS_TOKEN_HERE"
+HOSTNAME="YOUR_CUSTOM_HOST_NAME"
+SSHPORT=22
+NEWUSER=adminUser
 
 # Functions
 generate_post_data()
@@ -115,6 +121,8 @@ if ! [ -f /home/pi/.firstboot.log ]; then
     if [ "$ipAddress" == "hostname:" ]; then
         ipAddress="Ip error"
     fi
+
+    # TODO: Get and inform public ip
 
 
     echo "*** Sending a Pushbullet message reporting the original Raspberry status"
@@ -246,6 +254,9 @@ else
     if [ "$ipAddress" == "hostname:" ]; then
         ipAddress="Ip error"
     fi
+
+    # TODO: Get and inform public ip
+
 
     echo "*** Sending a Pushbullet message reporting the final Raspberry status"
     # echo "$(generate_post_data)"
