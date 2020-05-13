@@ -60,74 +60,74 @@ EOF
 }
 
 
-    # ------------------------------------------------------------------------
+# ------------------------------------------------------------------------
 echo "*** Getting tool versions and status"
-    # ------------------------------------------------------------------------
+# ------------------------------------------------------------------------
 
-    aptVersion=`apt --version 2>&1 | awk '{print $2}'`
-    if [[ "$aptVersion" == "line" || "$aptVersion" == "Java" ]]; then
-        aptVersion="No apt"
-    fi
+aptVersion=`apt --version 2>&1 | awk '{print $2}'`
+if [[ "$aptVersion" == "line" || "$aptVersion" == "Java" ]]; then
+    aptVersion="No apt"
+fi
 
-    pythonVersion=`python --version 2>&1 | awk '{print $2}'`
-    if [ "$pythonVersion" == "line" ]; then
-        pythonVersion="No python"
-    fi
+pythonVersion=`python --version 2>&1 | awk '{print $2}'`
+if [ "$pythonVersion" == "line" ]; then
+    pythonVersion="No python"
+fi
 
-    python3Version=`python3 --version 2>&1 | awk '{print $2}'`
-    if [ "$python3Version" == "line" ]; then
-        python3Version="No python3"
-    fi
+python3Version=`python3 --version 2>&1 | awk '{print $2}'`
+if [ "$python3Version" == "line" ]; then
+    python3Version="No python3"
+fi
 
-    pipVersion=`pip --version 2>&1 | awk '{print $2}'`
-    if [ "$pipVersion" == "line" ]; then
-        pipVersion="No pip"
-    fi
+pipVersion=`pip --version 2>&1 | awk '{print $2}'`
+if [ "$pipVersion" == "line" ]; then
+    pipVersion="No pip"
+fi
 
-    pip3Version=`pip3 --version 2>&1 | awk '{print $2}'`
-    if [ "$pip3Version" == "line" ]; then
-        pip3Version="No pip3"
-    fi
+pip3Version=`pip3 --version 2>&1 | awk '{print $2}'`
+if [ "$pip3Version" == "line" ]; then
+    pip3Version="No pip3"
+fi
 
-    gitVersion=`git --version 2>&1 | awk '{print $3}'`
-    if [[ "$gitVersion" == "line" || "$gitVersion" == *":"* ]]; then
-        gitVersion="No git"
-    fi
+gitVersion=`git --version 2>&1 | awk '{print $3}'`
+if [[ "$gitVersion" == "line" || "$gitVersion" == *":"* ]]; then
+    gitVersion="No git"
+fi
 
-    javaVersion=`java --version 2>&1 | awk 'NR==1{print $2}'`
-    if [ "$javaVersion" == "line" ]; then
-        javaVersion="No java"
-    fi
-
-
-    virtualenvVersion=`virtualenv --version 2>&1 | awk '{print $2}'`
-    if [ "$virtualenvVersion" == "line" ]; then
-        virtualenvVersion="No virtualenv"
-    fi
-
-    screenVersion=`screen --version 2>&1 | awk '{print $3}'`
-    if [[ "$screenVersion" == "line" || "$screenVersion" == *":"* ]]; then
-        screenVersion="No screen"
-    fi
-
-    avahiVersion=`avahi-daemon --version 2>&1 | awk '{print $2}'`
-    if [ "$avahiVersion" == "line" ]; then
-        avahiVersion="No avahi-daemon"
-    fi
-
-    rmateVersion=`rmate --version 2>&1 | awk '{print $2}'`
-    if [ "$rmateVersion" == "line" ]; then
-        rmateVersion="No rmate"
-    fi
+javaVersion=`java --version 2>&1 | awk 'NR==1{print $2}'`
+if [ "$javaVersion" == "line" ]; then
+    javaVersion="No java"
+fi
 
 
-    echo "*** Getting ip address"
-    ipAddress=`hostname -I 2>&1 | awk 'NR==1{print $1}'`
-    if [ "$ipAddress" == "hostname:" ]; then
-        ipAddress="Ip error"
-    fi
+virtualenvVersion=`virtualenv --version 2>&1 | awk '{print $2}'`
+if [ "$virtualenvVersion" == "line" ]; then
+    virtualenvVersion="No virtualenv"
+fi
 
-    # TODO: Get and inform public ip
+screenVersion=`screen --version 2>&1 | awk '{print $3}'`
+if [[ "$screenVersion" == "line" || "$screenVersion" == *":"* ]]; then
+    screenVersion="No screen"
+fi
+
+avahiVersion=`avahi-daemon --version 2>&1 | awk '{print $2}'`
+if [ "$avahiVersion" == "line" ]; then
+    avahiVersion="No avahi-daemon"
+fi
+
+rmateVersion=`rmate --version 2>&1 | awk '{print $2}'`
+if [ "$rmateVersion" == "line" ]; then
+    rmateVersion="No rmate"
+fi
+
+
+echo "*** Getting ip address"
+ipAddress=`hostname -I 2>&1 | awk 'NR==1{print $1}'`
+if [ "$ipAddress" == "hostname:" ]; then
+    ipAddress="Ip error"
+fi
+
+# TODO: Get and inform public ip
 
 
 echo "*** Sending a Pushbullet message reporting the Raspberry status"
