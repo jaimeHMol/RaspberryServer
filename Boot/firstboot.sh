@@ -170,8 +170,8 @@ if ! [ -f /home/pi/.firstboot.log ]; then
     sudo apt-get -y install default-jdk
     # TODO: Setup the JAVA_HOME environment variable
     sudo apt-get -y install screen
-    sudo apt-get -y install avahi-daemon
-    pip3 install virtualenv
+    sudo apt-get -y install avahi-daemonF
+    sudo pip3 install virtualenv
     sudo curl -o /usr/local/bin/rmate https://raw.githubusercontent.com/aurora/rmate/master/rmate
     sudo chmod +x /usr/local/bin/rmate
     sudo apt-get clean
