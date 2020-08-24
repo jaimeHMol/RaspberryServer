@@ -3,33 +3,12 @@
 echo "*** Executing linuxWorkspaceSetup script"
 
 # Constants
-PUSHBULLETKEY="PUT_YOUR_PUSHBULLET_API_ACCESS_TOKEN_HERE"
-HOSTNAME="YOUR_CUSTOM_HOST_NAME"
-SSHPORT=22
-NEWUSER=adminUser
+NEWUSER=jaimehmol
 
-
-# echo "*** Creating new user (qb user) forcing them to change their passwod in next login"
-# sudo useradd -m "$NEWUSER"
-# sudo adduser "$NEWUSER" sudo
-# echo "$NEWUSER:raspberry" | sudo chpasswd
-# sudo passwd -e $NEWUSER
 
 echo "*** Updating existing tools"
 sudo apt-get update
 sudo apt-get upgrade
-
-
-# echo "*** Specific Rapsberry configs"
-# # sed 's+<Word to find>+<Word use to replace>+g' input.txt
-# echo "***   Changing SSH port"
-# sudo sed -i "s/#Port 22/Port "$SSHPORT"/g" /etc/ssh/sshd_config
-# # sudo service ssh restart
-
-# echo "***   Changing hostname"
-# echo $HOSTNAME > /etc/hostname
-# sed -i "s/raspberrypi/$HOSTNAME/g" /etc/hosts
-# hostname $HOSTNAME
 
 echo "***   Install workspace tools "
 sudo apt-get -y install python-pip
