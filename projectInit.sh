@@ -23,7 +23,13 @@ source $VIRTUALENVIRONMENTNAME/bin/activate
 
 echo "***   Installing modules"
 pip3 install jupyter
-
+pip3 install matplotlib
+pip3 install numpy
+pip3 install pandas
+pip3 install Pillow
+pip3 install opencv-python
+pip3 install keras
+pip3 install tensorflow
 
 
 echo "***   Generating requirements.txt"
